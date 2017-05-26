@@ -1,0 +1,19 @@
+{
+  "name": "hal9k",
+  "version": "1.0.0",
+  "description": "coliquio's internal hal-library",
+  "main": "src/hal9k.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha -- -R spec"
+  },
+  "author": "coliquio GmbH",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "istanbul": "^0.4.5"
+  }
+}
