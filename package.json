@@ -1,7 +1,7 @@
 {
   "name": "hal9k",
   "version": "1.0.0",
-  "description": "coliquio's internal hal-library",
+  "description": "A pure JavaScript library for creating, modifying and validating HAL conform objects based on draft-kelly-json-hal-08",
   "main": "src/hal9k.js",
   "scripts": {
     "test": "mocha",
