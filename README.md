@@ -10,6 +10,10 @@ based on [draft-kelly-json-hal-08](https://tools.ietf.org/html/draft-kelly-json-
 
 - [Node.js](https://nodejs.org) >= 6.1.0
 
+## Installation
+
+    npm install hal9k
+
 ## Example
 
 ### Basic Resource
