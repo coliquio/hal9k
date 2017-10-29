@@ -78,7 +78,7 @@ hal9k.fromJSON(`{
 
 ```javascript
 // As json string...
-hal9k.isValidHAL('{
+hal9k.isValidHAL(`{
     "_links": {
         "self": {
             "href": "/orders/523"
@@ -93,7 +93,7 @@ hal9k.isValidHAL('{
     "currency": "USD",
     "status": "shipped",
     "total": 10.20
-}');
+}`);
 
 // as json object...
 hal9k.isValidHAL({
