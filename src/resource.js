@@ -102,8 +102,6 @@ class Resource {
         });
         return sanitizeHalJSONObj(halJSON);
     }
-
-
 }
 
 module.exports = Resource;
