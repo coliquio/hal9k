@@ -18,7 +18,7 @@ based on [draft-kelly-json-hal-08](https://tools.ietf.org/html/draft-kelly-json-
 
 ### Basic Resource
 
-```
+```javascript
 const hal9k = require('hal9k');
 hal9k.resource()
 .link('self', '/order/123')
@@ -33,13 +33,13 @@ hal9k.resource()
 
 ## hal9k
 
-```
+```javascript
 const hal9k = require('hal9k');
 ```
 
 ### hal9k.fromJSON(json) - Create a resource  from JSON
 
-```
+```javascript
 // As object...
 hal9k.fromJSON({
  _links: {
@@ -76,7 +76,7 @@ hal9k.fromJSON('{
 
 ##### Possible inputs
 
-```
+```javascript
 // As json string...
 hal9k.isValidHAL('{
     "_links": {
@@ -128,7 +128,7 @@ hal9k.isValidHAL(
 
 ##### Possible outputs
 
-```
+```javascript
 // valid Hal
 {
     warnings: [],
@@ -160,7 +160,7 @@ hal9k.isValidHAL(
 
 ### hal9k.resource(data) - Create a resource object
 
-```
+```javascript
 // creates an empty resource
 hal9k.resource();
 
@@ -174,7 +174,7 @@ hal9k.resource({
 
 ## The resource object chains
 
-### .link(rel, href, optionalParams) - Add links
+### `.link(rel, href, optionalParams)` - Add links
 
 *optionalParams:  
 href,
@@ -186,7 +186,7 @@ profile,
 title,
 hreflang*
 
-```
+```javascript
 hal9k.resource()
 .link('self', '/example/href/2');
 
@@ -212,9 +212,9 @@ hal9k.resource()
 ]);
 ```
 
-### .embed(rel, resource) - Embed resources
+### `.embed(rel, resource)` - Embed resources
 
-```
+```javascript
 hal9k.resource()
 .link('self', '/example/href/2')
 .embed('order', hal9k.resource());
@@ -227,9 +227,9 @@ hal9k.resource()
 ]);
 ```
 
-### .state(data) - Add state
+### `.state(data)` - Add state
 
-```
+```javascript
 hal9k.resource()
 .link('self', '/example/href/2')
 .state({
@@ -239,11 +239,11 @@ hal9k.resource()
 });
 ```
 
-### .toJSON() - Returns valid HAL-JSON-Object (end of chain)
+### `.toJSON()` - Returns valid HAL-JSON-Object (end of chain)
 
 ##### Input
 
-```
+```javascript
 hal9k.resource({
     "currency": "USD",
     "status": "shipped",
@@ -257,7 +257,7 @@ hal9k.resource({
 
 ##### Result
 
-```
+```javascript
 {
  "_links": {
    "self": { "href": "/orders/523" },
@@ -270,11 +270,11 @@ hal9k.resource({
 }
 ```
 
-### .curie(name, href) - Add a link relation abbreviated via CURIE syntax
+### `.curie(name, href)` - Add a link relation abbreviated via CURIE syntax
 
 ##### Input
 
-```
+```javascript
 hal9k.resource()
 .link('self', '/orders')
 .curie('acme', 'http://docs.acme.com/relations/{rel}')
@@ -284,7 +284,7 @@ hal9k.resource()
 
 ##### Result
 
-```
+```javascript
 {
     "_links": {
         "self": {
