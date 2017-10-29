@@ -54,7 +54,7 @@ hal9k.fromJSON({
 });
 
 // or as string.
-hal9k.fromJSON('{
+hal9k.fromJSON(`{
     "_links": {
         "self": {
             "href": "/orders/523"
@@ -69,7 +69,7 @@ hal9k.fromJSON('{
     "currency": "USD",
     "status": "shipped",
     "total": 10.20
-}');
+}`);
 ```
 
 ### hal9k.isValidHal(json) - Validates resource syntax and structure
